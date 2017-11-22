@@ -1,2 +1,35 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="container">
+  <h1>Welcome to School Funder</h1>
+  <h3>Please enter the following information</h3>
+  <%= form_for(@user) do |f| %>
+    <%= f.label :first_name, 'First Name' %>
+    <%= f.text_field :first_name, class: 'form-control' %>
+
+    <%= f.label :last_name, 'Last Name' %>
+    <%= f.text_field :last_name, class: 'form-control' %>
+
+    <%= f.label :address %>
+    <%= f.text_field :address, class: 'form-control' %>
+
+    <%= f.label :city%>
+    <%= f.text_field :city, class: 'form-control' %>
+
+    <%= f.label :state_id, 'State' %>
+    <%= f.text_field :state_id, class: 'form-control' %>
+
+    <%= f.label :zip, 'Postal Code' %>
+    <%= f.text_field :zip, class: 'form-control' %>
+
+    <hr>
+
+    <%= f.label :email, 'Email (This will be your login)' %>
+    <%= f.text_field :email, class: 'form-control' %>
+
+    <%= f.label :password %>
+    <%= f.text_field :password, class: 'form-control' %>
+
+    <%= f.label :password_confirmation %>
+    <%= f.text_field :password_confirmation, class: 'form-control' %>
+    <%= f.submit "Create my account", class: "btn btn-primary" %>
+  <% end %>
+</div>
