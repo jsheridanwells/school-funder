@@ -1,35 +1,35 @@
-<div class="container">
+<div class="container form-container">
   <h1>Welcome to School Funder</h1>
-  <h3>Please enter the following information</h3>
-  <%= form_for(@user) do |f| %>
+  <h3 class="h3-form">Please enter the following information</h3>
+  <%= form_for(@user, :html => { class: 'page-form' }) do |f| %>
     <%= f.label :first_name, 'First Name' %>
-    <%= f.text_field :first_name, class: 'form-control' %>
+    <%= f.text_field :first_name, :class => "form-control form-input" %>
 
     <%= f.label :last_name, 'Last Name' %>
-    <%= f.text_field :last_name, class: 'form-control' %>
+    <%= f.text_field :last_name, :class => 'form-control form-input' %>
 
     <%= f.label :address %>
-    <%= f.text_field :address, class: 'form-control' %>
+    <%= f.text_field :address, :class => 'form-control form-input' %>
 
     <%= f.label :city%>
-    <%= f.text_field :city, class: 'form-control' %>
+    <%= f.text_field :city, :class => 'form-control form-input' %>
 
     <%= f.label :state_id, 'State' %>
-    <%= f.text_field :state_id, class: 'form-control' %>
+    <%= f.text_field :state_id, :class => 'form-control form-input' %>
 
     <%= f.label :zip, 'Postal Code' %>
-    <%= f.text_field :zip, class: 'form-control' %>
+    <%= f.text_field :zip, :class => 'form-control form-input' %>
 
     <hr>
 
     <%= f.label :email, 'Email (This will be your login)' %>
-    <%= f.text_field :email, class: 'form-control' %>
+    <%= f.text_field :email, :class => 'form-control form-input' %>
 
     <%= f.label :password %>
-    <%= f.text_field :password, class: 'form-control' %>
+    <%= f.text_field :password, :class => 'form-control form-input' %>
 
     <%= f.label :password_confirmation %>
-    <%= f.text_field :password_confirmation, class: 'form-control' %>
-    <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <%= f.text_field :password_confirmation, :class => 'form-control form-input' %>
+    <%= f.submit "Create my account", :class => "btn btn-primary" %>
   <% end %>
 </div>
