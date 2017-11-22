@@ -1,2 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.main {
+  margin-top: 12%;
+}
+
+.footer {
+  z-index: 99;
+  background-color: #fff;
+  border-top: 1px solid #000;
+}
