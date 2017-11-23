@@ -1,7 +1,8 @@
 <div class="container form-container">
   <h1>Welcome to School Funder</h1>
   <h3 class="h3-form">Please enter the following information</h3>
-  <%= form_for(@user, :html => { class: 'page-form' }) do |f| %>
+  <%= render 'shared/error_messages'%>
+  <%= form_for(@user, url: signup_path, :html => { class: 'page-form' }) do |f| %>
     <%= f.label :first_name, 'First Name' %>
     <%= f.text_field :first_name, :class => "form-control form-input" %>
 
@@ -26,10 +27,10 @@
     <%= f.text_field :email, :class => 'form-control form-input' %>
 
     <%= f.label :password %>
-    <%= f.text_field :password, :class => 'form-control form-input' %>
+    <%= f.password_field :password, :class => 'form-control form-input' %>
 
-    <%= f.label :password_confirmation %>
-    <%= f.text_field :password_confirmation, :class => 'form-control form-input' %>
+    <%= f.label :password_confirmation, 'Confirmation' %>
+    <%= f.password_field :password_confirmation, :class => 'form-control form-input' %>
     <%= f.submit "Create my account", :class => "btn btn-primary" %>
   <% end %>
 </div>
